@@ -1,0 +1,351 @@
+/*body and layout styles*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e2125;
+    /*optional background color: #2c3e50*/
+    color: #ecf0f1;
+}
+
+h1,
+h2 {
+    font-family: 'Verdana', sans-serif;
+    color: #ecf0f1;
+}
+
+/*header styling*/
+header {
+    grid-area: header;
+    background-color: #8e1c1c;
+    color: white;
+    text-align: center;
+    padding: 2em;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/*navigation styling*/
+nav {
+    grid-area: nav;
+    background-color: #2f3136;
+    color: white;
+    padding: 1.5em;
+    border-right: 2px solid #8e1c1c;
+}
+
+nav h2 {
+    font-size: 1.5em;
+    color: #a93226;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 1em 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    /*makes the link texts bold*/
+    transition: color 0.3s ease;
+    /*adds a smooth transition for the color change*/
+}
+
+nav ul li a:hover {
+    color: #a93226;
+    /*optional subtle gray color on hover: color: #bdc3c7; */
+}
+
+/*main content styling*/
+main {
+    grid-area: main;
+    background-color: #2f3136;
+    color: #ecf0f1;
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid #8e1c1c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /*this adds shadow for depth*/
+
+    position: relative;
+    /*allows absolute positioning of child elements*/
+}
+
+/*floating icon styling*/
+.main-floating-icon {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 40px;
+    height: 40px;
+    background-color: #a93226;
+    border-radius: 50%;
+    /*creates a circular shape for the element*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+
+main h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #a93226;
+}
+
+main p {
+    line-height: 1.6em;
+    font-size: 1.1em;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/*aside section styling*/
+aside {
+    grid-area: aside;
+    background-color: #2f3136;
+    color: #ecf0f1;
+    padding: 2em;
+    border-radius: 10px;
+    border: 2px solid #8e1c1c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /*this adds shadow for depth*/
+
+    position: relative;
+    /*allows absolute positioning of child elements*/
+}
+
+/*floating icon 2*/
+.main-floating-icon2 {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 40px;
+    height: 40px;
+    background-color: #a93226;
+    border-radius: 50%;
+    /*creates a circular shape for the element*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+aside h2 {
+    font-size: 1.6em;
+    color: #a93226;
+}
+
+aside ul {
+    padding: 0;
+}
+
+aside ul li {
+    list-style-type: square;
+    margin: 1em 0;
+    /* Optional margin size: margin: 0.5em 0; */
+    font-size: 1.1em;
+    color: #ecf0f1;
+}
+
+/*bolding any paragraphs in the aside section*/
+.p-aside {
+    font-weight: bold;
+}
+
+/*footer styling*/
+footer {
+    grid-area: footer;
+    background-color: #2f3136;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    border-top: 2px solid #8e1c1c;
+}
+
+footer h2 {
+    font-size: 1.5em;
+    color: #a93226;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/*grid layout*/
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'nav nav main main main aside'
+        'nav nav main main main aside'
+        'nav nav footer footer footer footer';
+    grid-gap: 1em;
+    max-width: 80em;
+    margin: auto;
+    padding: 2em;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+.main-floating-icon3 {
+    display: none;
+}
+
+/*tablet viewport styles*/
+@media only screen and (max-width: 900px) {
+    body {
+        background-color: #1e2125;
+    }
+
+    .grid-container {
+        grid-template-areas:
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'main main main main aside aside'
+            'footer footer footer footer footer footer';
+    }
+
+    /*centering the title of the main section*/
+    main h2 {
+        text-align: center;
+    }
+
+    ul li {
+        display: inline-block;
+    }
+
+    nav {
+        text-align: center;
+        /*centering the title and links*/
+        border-left: 2px solid #8e1c1c;
+    }
+
+    nav ul {
+        padding: 0;
+        display: inline-block;
+        /*makes the list inline-block for centering*/
+    }
+
+    nav ul li {
+        margin: 1em;
+    }
+
+    /*quick centering and padding for the bulletpoints in the aside section*/
+    aside ul {
+        padding-left: 20px;
+        text-align: center;
+        list-style-position: inside;
+    }
+
+    aside ul li {
+        display: inline-block;
+        /*makes the list items inline-block for centering*/
+        margin: 1em 0;
+    }
+
+    aside h2 {
+        text-align: center;
+    }
+
+    /*centering any paragraphs in the aside section*/
+    .p-aside {
+        text-align: center;
+    }
+}
+
+/*mobile viewport styles*/
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #1e2125;
+    }
+
+    .grid-container {
+        grid-template-areas:
+            'nav nav nav nav nav nav'
+            'header header header header header header'
+            'main main main main main main'
+            'aside aside aside aside aside aside'
+            'footer footer footer footer footer footer';
+    }
+
+    /*centering the title of the main section*/
+    main h2 {
+        text-align: center;
+    }
+
+    nav {
+        text-align: center;
+        /*centering the title and links*/
+        border-left: 2px solid #8e1c1c;
+    }
+
+    nav ul {
+        padding: 0;
+        display: inline-block;
+        /*makes the list inline-block for centering*/
+    }
+
+    nav ul li {
+        margin: 1em;
+    }
+
+    /*quick centering and padding for the bulletpoints in the aside section*/
+    aside ul {
+        padding-left: 20px;
+        text-align: center;
+        list-style-position: inside;
+    }
+
+    aside ul li {
+        display: inline-block;
+        /*makes the list items inline-block for centering*/
+        margin: 1em 0;
+    }
+
+    aside h2 {
+        text-align: center;
+    }
+
+    /*floating text*/
+    .main-floating-icon3 {
+        position: absolute;
+        top: 0.5em;
+        right: 0.5em;
+        width: 60px;
+        height: 60px;
+        background-color: #a93226;
+        border-radius: 50%;
+        /*creates a circular shape for the element*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    /*centering any paragraphs in the aside section*/
+    .p-aside {
+        text-align: center;
+        font-weight: bold;
+    }
+}
