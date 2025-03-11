@@ -39,7 +39,7 @@ nav {
 
 nav h2 {
     font-size: 1.5em;
-    color: #a93226;
+    color: #c0392b;
 }
 
 nav ul {
@@ -62,7 +62,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #a93226;
+    color: #c0392b;
     /*optional subtle gray color on hover: color: #bdc3c7; */
 }
 
@@ -102,7 +102,7 @@ main {
 main h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    color: #a93226;
+    color: #c0392b;
 }
 
 main p {
@@ -149,7 +149,7 @@ aside {
 
 aside h2 {
     font-size: 1.6em;
-    color: #a93226;
+    color: #c0392b;
 }
 
 aside ul {
@@ -181,7 +181,7 @@ footer {
 
 footer h2 {
     font-size: 1.5em;
-    color: #a93226;
+    color: #c0392b;
 }
 
 footer p {
