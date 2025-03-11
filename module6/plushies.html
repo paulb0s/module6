@@ -27,9 +27,9 @@
 
         <main>
             <h2>A short video of my plushies:</h2>
-            <video width="600" height="500" controls muted>
-                <source src="../module6/media/plushies.mp4" alt="A video of different plushies on a bed"
-                    type="video/mp4">
+            <video width="600" height="500" controls muted aria-label="A video of different plushies on a bed">
+                <!--I found that the aria label attribute can serve as a substitute for alt text, as the video attribute does not support it-->
+                <source src="../module6/media/plushies.mp4" type="video/mp4">
                 Unfortunately your browser does not support this video tag.
             </video>
         </main>
