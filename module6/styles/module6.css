@@ -110,11 +110,6 @@ main p {
     font-size: 1.1em;
 }
 
-video {
-    max-width: 100%;
-    height: auto;
-}
-
 /*aside section styling*/
 aside {
     grid-area: aside;
@@ -209,6 +204,23 @@ ul li {
 .main-floating-icon3 {
     display: none;
 }
+
+/*some media styling*/
+.pandapic {
+    max-width: 100%;
+    height: auto;
+}
+
+.teddypic {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
 
 /*tablet viewport styles*/
 @media only screen and (max-width: 900px) {
